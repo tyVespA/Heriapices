@@ -1,7 +1,6 @@
 /*------------------------------------*\
   # CSS RESET
 \*------------------------------------*/
-
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -10,18 +9,17 @@
 *::after {
   box-sizing: border-box;
 }
+
 /*
   2. Remove default margin
 */
 * {
   margin: 0;
 }
+
 /*
   3. Allow percentage-based heights in the application
 */
-// html, body {
-//   height: 100%;
-// }
 /*
   Typographic tweaks!
   4. Add accessible line-height
@@ -30,6 +28,7 @@
 body {
   -webkit-font-smoothing: antialiased;
 }
+
 /*
   6. Improve media defaults
 */
@@ -41,6 +40,7 @@ svg {
   display: block;
   max-width: 100%;
 }
+
 /*
   7. Remove built-in form typography styles
 */
@@ -50,6 +50,7 @@ textarea,
 select {
   font: inherit;
 }
+
 /*
   8. Avoid text overflows
 */
@@ -62,6 +63,7 @@ h5,
 h6 {
   overflow-wrap: break-word;
 }
+
 /*
   9. Create a root stacking context
 */
@@ -73,24 +75,40 @@ h6 {
 /*------------------------------------*\
   # MEDIA QUERY MIXINS
 \*------------------------------------*/
-
-@mixin for-phone-only {
-  @media (max-width: 899px) {
-    @content;
-  }
-}
-
-@mixin for-tablet-up {
-  @media (min-width: 900px) {
-    @content;
-  }
-}
-
 /*------------------------------------*\
   # BASE STYLES
 \*------------------------------------*/
-
 body {
   font-family: "Manrope", sans-serif;
   color: black;
 }
+
+nav {
+  background-color: pink;
+}
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 50px;
+  padding-block: 30px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+nav ul a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.wrapper-1200 {
+  display: grid;
+  grid-template-columns: 1fr min(1200px, 100% - 64px) 1fr;
+  grid-column-gap: 32px;
+}
+.wrapper-1200 > * {
+  grid-column: 2;
+}
+
+.full-bleed {
+  width: 100%;
+  grid-column: 1/-1;
+}/*# sourceMappingURL=main.css.map */

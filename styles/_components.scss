@@ -1,1 +1,17 @@
 @use "./base" as *;
+
+nav {
+  background-color: pink;
+  ul {
+    list-style-type: none;
+    display: flex;
+    gap: 50px;
+    padding-block: 30px;
+    text-transform: uppercase;
+    font-weight: 500;
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}
